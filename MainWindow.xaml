@@ -1,0 +1,42 @@
+﻿<Window x:Class="TestsspeechAI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestsspeechAI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+
+            <!-- Textbox for user input -->
+            <TextBox Name="txtInput"
+                     Height="80"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Auto"
+                     FontSize="16"
+                     Margin="10"/>
+
+            <!-- Button to convert -->
+            <Button Content="Convert to Speech" 
+                    Click="BtnConvert_Click" 
+                    Width="200" 
+                    Margin="10" />
+
+            <!-- Delete Button -->
+            <Button Content="Delete Audio File"
+                    Click="BtnDelete_Click"
+                    Width="200"
+                    Margin="10"
+                    Background="Red"
+                    Foreground="White" />
+
+            <!-- Hidden media player -->
+            <MediaElement Name="mediaPlayer"
+                          LoadedBehavior="Manual"
+                          UnloadedBehavior="Stop"
+                          Height="0" Width="0"/>
+        </StackPanel>
+    </Grid>
+</Window>
